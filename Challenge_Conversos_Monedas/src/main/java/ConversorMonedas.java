@@ -14,13 +14,18 @@ public class ConversorMonedas {
         Conversor conversor = new Conversor();
 
         while(opcion != 7){
-            menu.Welcome();
-            menu.MenuOptions();
-            menu.ChooseOption();
+            menu.welcome();
+            menu.menuOptions();
+            menu.chooseOption();
             opcion = tecladoIn.nextInt();
 
+            if (opcion == 7) {
+                System.out.println("Saliendo del programa...");
+                break;
+            }
+
             SubMonedas moneda = null;
-            menu.IngressValue();
+            menu.ingressValue();
             Double monto = tecladoIn.nextDouble();
             switch (opcion)
             {
@@ -53,9 +58,6 @@ public class ConversorMonedas {
                     break;
             }
 
-
-
-            cliente.buscarMoneda("MXN");
         }
 
 

@@ -14,7 +14,7 @@ public class Conversor implements ProcesarCambio {
 
 
 
-        return "Conversion: "+monedaOrigen+ " -> " + monedaFinal.getMoneda() + " dan $" + valorConvertido;
+        return "Conversion: "+monedaOrigen+ " -> " + monedaFinal.getMoneda() + " dan $" + valorConvertido+"\n";
     }
     public SubMonedas buscarMoneda(Map<String,Double> monedas, String moneda){
         SubMonedas subMoneda = new SubMonedas(moneda,monedas.get(moneda));
